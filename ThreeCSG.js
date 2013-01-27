@@ -146,7 +146,7 @@ window.ThreeBSP = (function() {
 				verticeUvs = [];
 				
 				vertex = polygon.vertices[0];
-				verticeUvs.push( new THREE.UV( vertex.uv.x, vertex.uv.y ) );
+				verticeUvs.push( new THREE.Vector2( vertex.uv.x, vertex.uv.y ) );
 				vertex = new THREE.Vector3( vertex.x, vertex.y, vertex.z );
 				matrix.multiplyVector3( vertex );
 				
@@ -158,7 +158,7 @@ window.ThreeBSP = (function() {
 				}
 				
 				vertex = polygon.vertices[j-1];
-				verticeUvs.push( new THREE.UV( vertex.uv.x, vertex.uv.y ) );
+				verticeUvs.push( new THREE.Vector2( vertex.uv.x, vertex.uv.y ) );
 				vertex = new THREE.Vector3( vertex.x, vertex.y, vertex.z );
 				matrix.multiplyVector3( vertex );
 				if ( typeof vertice_dict[ vertex.x + ',' + vertex.y + ',' + vertex.z ] !== 'undefined' ) {
@@ -169,7 +169,7 @@ window.ThreeBSP = (function() {
 				}
 				
 				vertex = polygon.vertices[j];
-				verticeUvs.push( new THREE.UV( vertex.uv.x, vertex.uv.y ) );
+				verticeUvs.push( new THREE.Vector2( vertex.uv.x, vertex.uv.y ) );
 				vertex = new THREE.Vector3( vertex.x, vertex.y, vertex.z );
 				matrix.multiplyVector3( vertex );
 				if ( typeof vertice_dict[ vertex.x + ',' + vertex.y + ',' + vertex.z ] !== 'undefined' ) {
